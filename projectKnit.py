@@ -2,13 +2,13 @@ import cv2
 import numpy as np
 #sw10005,10001
 # ====  Load Image ====
-img = cv2.imread("sk10003.jpg")
+img = cv2.imread("sw40001.jpg")
 
 # ====  Convert to Grayscale ====
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # ====  Apply Gaussian Blur ====
-blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+blurred = cv2.GaussianBlur(gray, (25, 25), 0)
 
 # ====  Apply Thresholding ====
 # Otsu + Inverted Binary so that dark yarn becomes white (255)
